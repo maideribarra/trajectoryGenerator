@@ -45,22 +45,16 @@ def createDataset(model, numMuestra):
             obs, reward, done, info = env.step(action)
             puntos=[]
             puntos.append(episodio)
-            puntos.append(obs[0])
-            puntos.append(obs[1])
-            puntos.append(obs[2])
-            puntos.append(obs[3])
-            puntos.append(obs[4])
-            puntos.append(obs[5])
-            puntos.append(obs[6])
-            puntos.append(obs[7])
+            puntos.append(obs[0]) #x
+            puntos.append(obs[1]) #y
+            puntos.append(obs[2]) #vx
+            puntos.append(obs[3]) #vy
+            puntos.append(obs[4]) #theta
+            puntos.append(obs[5]) #vtheta
+            puntos.append(obs[6]) #legx
+            puntos.append(obs[7]) #legy
             puntos.append(action[()])
-            arr.append(puntos)
-            #print(_state)
-            #print('episodio',episodio)
-            #print('obs',obs)
-            #print('action',action)
-        #env.play()
-            #print(episodio)        
+            arr.append(puntos)    
         episodio=episodio+1
     return arr
 
